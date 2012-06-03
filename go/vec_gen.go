@@ -1,7 +1,9 @@
 package main
 
 import (
+    "bufio"
     "fmt"
+    "log"
     "math/rand"
     "os"
     "strconv"
@@ -20,8 +22,14 @@ func main() {
     if err != nil { panic(err) }
     defer file.Close()
 
+    bw := bufio.NewWriter(file)
+    defer func() {
+        err := bw.Flush()
+        if err != nil { log.Fatal(err) }
+    }()
+
     for i := 0; i < count; i++ {
         r := rand.Uint32()
-        fmt.Fprintf(file, "%d\n", r)
+        fmt.Fprintf(bw, "%d\n", r)
     }
 }
