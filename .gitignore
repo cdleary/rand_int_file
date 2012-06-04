@@ -1,7 +1,8 @@
-vec_gen.out
 ml/*.cmi
 ml/*.cmo
 ml/*.cmx
 ml/*.o
 java/*.class
 *.swp
+*.out
+*.exe
