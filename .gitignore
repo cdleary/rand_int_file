@@ -1,5 +1,7 @@
 vec_gen.out
 ml/*.cmi
 ml/*.cmo
+ml/*.cmx
+ml/*.o
 java/*.class
 vec_gen_*
