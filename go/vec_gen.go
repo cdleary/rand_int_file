@@ -29,7 +29,7 @@ func main() {
     }()
 
     for i := 0; i < count; i++ {
-        r := rand.Uint32()
+        r := rand.Int31()
         fmt.Fprintf(bw, "%d\n", r)
     }
 }

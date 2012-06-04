@@ -14,7 +14,7 @@ fn main(args: [str]) {
     let fw = result::get(io::buffered_file_writer("vec_gen.out"));
     let mut i = 0;
     while i < count {
-        let r = rng.next();
+        let r = rng.next() & (0x7fffffffu as u32);
         fw.write_line(int::to_str(r as int, 10u));
         i += 1;
     }

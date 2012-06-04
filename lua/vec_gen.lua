@@ -8,7 +8,7 @@ function main(args)
 
     math.randomseed(os.time())
 
-    local upper = math.floor(2^32-1)
+    local upper = math.floor(2^31-1)
 
     io.output(io.open("vec_gen.out", "w"))
     for i = 1,count do

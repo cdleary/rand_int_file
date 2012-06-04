@@ -5,3 +5,4 @@ ml/*.cmx
 ml/*.o
 java/*.class
 vec_gen_*
+*.swp

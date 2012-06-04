@@ -5,6 +5,8 @@ import java.io.IOException;
 
 class VecGen
 {
+    static final int INT_MAX = 2147483647;
+
     public static void main(String args[]) {
         if (args.length != 1) {
             System.err.println("Usage: VecGen <elem_count>");
@@ -20,7 +22,7 @@ class VecGen
             Random rng = new Random();
 
             for (int i = 0; i < count; ++i) {
-                int r = rng.nextInt();
+                int r = rng.nextInt(INT_MAX);
                 bw.write(r + "\n");
             }
 
