@@ -1,3 +1,3 @@
 .PHONY: all
 all:
-	time luajit ./vec_gen.lua 100000000
+	time luajit ./vec_gen_opt.lua 100000000
