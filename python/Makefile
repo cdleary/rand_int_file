@@ -1,3 +1,3 @@
 .PHONY: all
 all:
-	time pypy ./vec_gen.py 100000000
+	time pypy ./vec_gen_opt.py 100000000
