@@ -13,6 +13,8 @@ itoa(int32_t v)
         return buf;
     }
 
+    bool negative = v < 0;
+
     size_t i = 0;
     while (0 != v) {
         int32_t q = v / 10;
@@ -21,7 +23,7 @@ itoa(int32_t v)
         v = q;
     }
 
-    if (v < 0)
+    if (negative)
         buf[i++] = '-';
 
     for (size_t j = 0; j < i / 2; ++j)
