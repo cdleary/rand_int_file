@@ -26,7 +26,7 @@ class VecGenOpt
 
             for (int i = 0; i < count; ++i) {
                 int r = rng.nextInt(INT_MAX);
-                bw.write(r);
+                bw.write(Integer.toString(r));
                 bw.write("\n");
             }
 
