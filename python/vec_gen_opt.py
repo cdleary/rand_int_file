@@ -11,7 +11,7 @@ def main():
 
     with open('vec_gen.out', 'w') as file:
         for i in xrange(count):
-            r = random.getrandbits(31)
+            r = random.randrange(2**31)
             file.write('%d\n' % r)
 
 if __name__ == '__main__':
